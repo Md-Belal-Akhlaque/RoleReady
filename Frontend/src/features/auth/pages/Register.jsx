@@ -32,13 +32,13 @@ const handleSubmit = async (e) => {
 };
 
 
-// if (loading) {
-//     return (
-//         <main className="auth-page">
-//             <h1>Registering...</h1>
-//         </main>
-//     );
-// }
+if (loading) {
+    return (
+        <main className="auth-page">
+            <h1>Registering...</h1>
+        </main>
+    );
+}
 
   return (
     <>
