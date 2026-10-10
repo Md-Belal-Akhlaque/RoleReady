@@ -1,0 +1,104 @@
+INTERVIEW REPORT:
+{
+  matchScore: 85,
+  technicalQuestions: [
+    {
+      question: 'How did you implement user authentication using JWT and HTTP-only cookies in your Food Delivery Web Application?',
+      intention: 'To test your practical knowledge of full-stack authentication, session security, backend middleware implementation, and React authorization state management.',
+      answer: 'Explain the auth flow clearly: User submits credentials -> Node.js/Express backend validates -> JWT is generated using a secret key -> Token is sent via an HTTP-only cookie to mitigate XSS attacks. Detail how the Express middleware verifies the cookie on protected routes and how React manages the authenticated state across different user roles.'
+    },
+    {
+      question: 'How did you handle role-based access control and state management across user, restaurant owner, and delivery partner dashboards in your Food Delivery app?',
+      intention: 'To evaluate your understanding of frontend architecture, component structure, conditional rendering, and state organization in React.js.',
+      answer: 'Explain how user roles (User, Restaurant Owner, Delivery Partner) were stored in JWT payloads and verified on both frontend (via React Router route guards) and backend (Express role-checking middleware). Discuss how shared state like cart items or active order status was managed using React state/context.'
+    },
+    {
+      question: 'Can you compare MongoDB and SQL databases? In what scenarios would you choose SQL over MongoDB for an application?',
+      intention: "To test your understanding of database paradigms, schema design, and compliance with the job description's SQL requirement.",
+      answer: 'Compare NoSQL (MongoDB document structure, flexibility, horizontal scaling) with Relational SQL (structured tables, strict schemas, ACID transactions, complex foreign key JOINs). State that SQL is preferred for applications requiring complex relational data, strict consistency (e.g., financial ledger transactions), and standardized queries.'
+    },
+    {
+      question: 'How does the Event Loop work in JavaScript, and how do asynchronous operations work in Node.js?',
+      intention: 'To assess core JavaScript and Node.js execution knowledge, required under the core JD requirements.',
+      answer: 'Explain single-threaded JavaScript execution, the Call Stack, Web APIs / Node C++ APIs, Microtask Queue (Promises), and Macrotask Queue (setTimeout/setInterval). Describe how non-blocking I/O in Node.js delegates tasks like database queries or file reading to libuv thread pool while remaining responsive.'
+    }
+  ],
+  behavioralQuestions: [
+    {
+      question: 'During your internship at ABC Technologies, can you describe a time you encountered a challenging bug in your React frontend or Express backend and how you resolved it?',
+      intention: 'To evaluate your technical problem-solving methodology, debugging tools, and persistence when working on real-world applications.',
+      answer: 'Use the STAR method: Describe the Situation (a specific bug in React state or Express endpoint), Task (need to fix it without breaking existing functionality), Action (how you used Postman, DevTools console, or logging to isolate the root cause), and Result (successful bug fix and operational stability).'
+    },
+    {
+      question: 'How do you approach learning new technologies like basic system design or SQL while managing your MCA coursework and internship tasks?',
+      intention: 'To gauge your continuous learning ability, time management, and dedication to personal development.',
+      answer: 'Highlight your proactive learning habit mentioned in your self-description. Discuss how you set aside structured practice time for Data Structures and Algorithms, build self-initiated projects (like the Movie Streaming app and Typing Speed app), and apply continuous practice to strengthen gaps like SQL and backend design.'
+    }
+  ],
+  skillGaps: [
+    {
+      skill: 'SQL Databases',
+      gap: 'Candidate possesses basic SQL knowledge compared to hands-on project experience in MongoDB. The JD requires working knowledge of both.',
+      severity: 'medium'
+    },
+    {
+      skill: 'System Design',
+      gap: "Candidate self-reports needing improvement in system design. The JD includes basic system design under 'Nice to Have'.",
+      severity: 'medium'
+    },
+    {
+      skill: 'TypeScript',
+      gap: "No experience in TypeScript listed in resume or self-description, which is requested as a 'Nice to Have' skill in the JD.",
+      severity: 'low'
+    },
+    {
+      skill: 'DevOps / Cloud Tools (Docker, AWS)',
+      gap: "No listed exposure to containerization (Docker) or cloud computing platforms (AWS) requested under 'Nice to Have'.",
+      severity: 'low'
+    }
+  ],
+  preparationPlan: [
+    {
+      day: 1,
+      plan: 'Master JavaScript Core Concepts and Async Execution',
+      task: [Array],
+      focus: [Array]
+    },
+    {
+      day: 2,
+      plan: 'React.js Architecture and Component Patterns',
+      task: [Array],
+      focus: [Array]
+    },
+    {
+      day: 3,
+      plan: 'Backend API Design & Authentication Deep Dive',
+      task: [Array],
+      focus: [Array]
+    },
+    {
+      day: 4,
+      plan: 'SQL & Relational Database Concepts',
+      task: [Array],
+      focus: [Array]
+    },
+    {
+      day: 5,
+      plan: 'Basic System Design and Problem Solving (DSA)',
+      task: [Array],
+      focus: [Array]
+    },
+    {
+      day: 6,
+      plan: 'Internship Experience and Behavioral Preparation',
+      task: [Array],
+      focus: [Array]
+    },
+    {
+      day: 7,
+      plan: 'Mock Interviews & Resume Review',
+      task: [Array],
+      focus: [Array]
+    }
+  ]
+}
