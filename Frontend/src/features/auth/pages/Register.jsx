@@ -10,36 +10,48 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const [error, setError] = useState("");
+
+
 
 const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
 
-    const success = await handleRegister({
+    const result = await handleRegister({
         username,
         email,
         password
     });
 
-    if (success) {
+    if (result.success) {
         navigate("/home");
+    } else {
+        setError(result.message);
     }
 };
 
-if (loading) {
-    return (
-        <main className="auth-page">
-            <h1>Registering...</h1>
-        </main>
-    );
-}
+
+// if (loading) {
+//     return (
+//         <main className="auth-page">
+//             <h1>Registering...</h1>
+//         </main>
+//     );
+// }
 
   return (
     <>
             <main className="auth-page">
                 <div className="form-container">
                     <h1>Sign Up</h1>
+                    {error && (
+                        <p className="error-message" role="alert">
+                            {error}
+                        </p>
+                    )}
 
-                    <form onSubmit={handleSubmit} action="/register" method="POST">
+                    <form onSubmit={handleSubmit}>
 
                     <div className="input-group">
                             <label htmlFor="username">Username</label>
@@ -50,7 +62,7 @@ if (loading) {
                                 id="username"
                                 placeholder="Enter your username"
                                 required
-                                onChange={(e)=>[setUsername(e.target.value)]}
+                                onChange={(e)=>setUsername(e.target.value)}
                             />
                         </div>
 
@@ -63,7 +75,7 @@ if (loading) {
                                 id="email"
                                 placeholder="Enter your email"
                                 required
-                                onChange={(e)=>[setEmail(e.target.value)]}
+                                onChange={(e)=>setEmail(e.target.value)}
                             />
                         </div>
 
@@ -78,15 +90,16 @@ if (loading) {
                                 id="password"
                                 placeholder="Enter your Password"
                                 required
-                                onChange={(e)=>[setPassword(e.target.value)]}
+                                onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
 
                         <button
                             type="submit"
                             className="button primary-button"
+                            disabled={loading}
                         >
-                            Register
+                            {loading ? "Registering..." : "Register"}
                         </button>
 
                     </form>

@@ -16,10 +16,6 @@ export const InterviewProvider = ({children})=>{
 }
 
 
-
-
-// import { createContext, useState } from "react";
-
 // import {
 //     generateInterviewReport,
 //     getInterviewReportById,

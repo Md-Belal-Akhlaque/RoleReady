@@ -3,45 +3,49 @@ import axios from "axios";
  
 
 const api = axios.create({
-    baseURL: "http://localhost:3000",
+    baseURL: "https://roleready-hlcd.onrender.com/",
     withCredentials: true
 })
 
-export const register = async({username,email,password})=>{
-    try{
 
-        const response = await api.post("/api/auth/register",{
-            username,
-            email,
-            password
-        });
+export const register = async ({ username, email, password }) => {
+    const response = await api.post("/api/auth/register", {
+        username,
+        email,
+        password
+    });
 
-        console.log(response);
-        
-        return response.data;
+    return response.data;
+};
 
-    }catch(err){
-        console.log(err)
-        console.log(err.message);
-    }
-}
 
-export const login = async ({email,password})=>{
-    try{
+// export const login = async ({email,password})=>{
+//     try{
 
-        const response = await api.post("/api/auth/login",{
-            email,
-            password
-        });
-        console.log(response);
+//         const response = await api.post("/api/auth/login",{
+//             email,
+//             password
+//         });
+//         console.log(response);
 
-        return response.data;
+//         return response.data;
 
-    }catch(err){
-        console.log(err)
-        console.log(err.message);
-    }
-}
+//     }catch(err){
+//         console.log(err)
+//         console.log(err.message);
+//     }
+// }
+
+
+export const login = async ({ email, password }) => {
+    const response = await api.post("/api/auth/login", {
+        email,
+        password
+    });
+
+    return response.data;
+};
+
 
 export const logout = async()=>{
     try {

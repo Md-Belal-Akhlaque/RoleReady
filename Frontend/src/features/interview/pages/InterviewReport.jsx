@@ -92,7 +92,7 @@ const InterviewReport = () => {
                     </div>
 
                     <div>
-                        <h1>InterviewIQ</h1>
+                        <h1>Role Ready</h1>
                         <span>Interview Report</span>
                     </div>
                 </div>

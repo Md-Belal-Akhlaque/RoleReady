@@ -156,7 +156,7 @@ const Home = () => {
                     </div>
 
                     <div className="brand-copy">
-                        <h1>InterviewIQ</h1>
+                        <h1>Role Ready</h1>
                         <span>AI-powered interview preparation</span>
                     </div>
                 </div>

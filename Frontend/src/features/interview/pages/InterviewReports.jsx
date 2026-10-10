@@ -59,7 +59,7 @@ const InterviewReports = () => {
                 <div className="brand">
                     <div className="brand-mark">AI</div>
                     <div className="brand-copy">
-                        <h1>InterviewIQ</h1>
+                        <h1>Role Ready</h1>
                         <span>Saved interview reports</span>
                     </div>
                 </div>

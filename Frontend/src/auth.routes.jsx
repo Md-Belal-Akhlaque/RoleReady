@@ -19,6 +19,14 @@ const routers = createBrowserRouter([
         path: '/home',
         element: <Protected><Home /></Protected>
     },
+    {
+        path: '/',
+        element: <Protected><Home /></Protected>
+    },
+    {
+        path: '#',
+        element: <Protected><Register /></Protected>
+    },
 
     {
         path: "/interview/report/:interviewId",
