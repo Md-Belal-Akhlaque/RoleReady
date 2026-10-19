@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://roleready-hlcd.onrender.com/api",
+  baseURL: "https://roleready-hlcd.onrender.com/",
   withCredentials: true,
 });
 
@@ -46,10 +46,11 @@ export const login = async ({ email, password }) => {
 export const logout = async () => {
   try {
     const response = await api.post("/api/auth/logout");
-    console.log(response);
+    // console.log(response);
     return response.data;
   } catch (error) {
-    console.log(error);
+    // console.log(error);
+    return error;
   }
 };
 
@@ -59,10 +60,10 @@ export const getMe = async () => {
       withCredentials: true,
     });
 
-    console.log(response);
+    // console.log(response);
     return response.data;
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     return error;
   }
 };
